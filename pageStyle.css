@@ -1,0 +1,119 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	background-color: #D3DDE3;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button:focus {
+	outline: 0;
+}
+
+/* Top Bar / Header */
+#header {
+	display: flex;
+	width: 100%;
+	height: 10%;
+	background-color: rgb(248,250,252);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+}
+#title {
+	width: 30%;
+	height: 100%;
+}
+
+/* Scheme List */
+#schemes {
+	width: 50%;
+	height: 100%;
+}
+#schemes > button {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+}
+#schemes > button:hover {
+	background-color: black;
+	color: white;
+}
+#schemes > button > i {
+	font-size: 2em;
+}
+#scheme-list, .scheme-group {
+	display: flex;
+	flex-direction: column;
+}
+#scheme-list {
+	margin-top: 1px;
+	display: none;
+}
+.scheme-group {
+	border-bottom: 1px solid rgba(0,0,0,.75);
+}
+.scheme {
+	text-align: left;
+	padding: 10px;
+	background-color: rgb(238, 240, 242);
+	border: none;
+}
+.scheme:hover, .scheme:focus {
+	background-color: black;
+	color: white
+}
+
+/* Editor toggle button */
+#editor-button {
+	width: 20%;
+	height: 100%;
+}
+#editor-button > button {
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+}
+#editor-button > button:hover {
+	background-color: black;
+	color: white;
+}
+#editor-button > button > i {
+	font-size: 2em;
+}
+
+#palette {
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+
+/* Palette Colors */
+.color-container {
+	width: 95%;
+	height: 20%;
+	background-color: rgb(230,230,230);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.color {
+	height: 80%;
+	width: 80%;
+	background-color: grey;
+	border: 1px solid rgba(0,0,0,.25);
+}
+.color > h1 {
+	padding: 5px;
+	background-color: rgba(0,0,0,.25);
+	color: white;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+
+}

@@ -1,0 +1,62 @@
+#editor-container {
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#editor {
+	height: 80%;
+	width: 80%;
+	background-color: #F8FAFC;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#editor > form {
+	width: 80%;
+}
+
+.slider-container, .hex-container {
+	width: 100%;
+}
+
+.hex-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.hex-container > input {
+	width: 100%;
+	color: black;
+	font-size: 1.1em;
+	padding: 10px;
+	text-align: center;
+	font-weight: 800;
+	border: none;
+}
+
+.slider-container {
+	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns: 75% 25%;
+
+}
+.slider-container > input[type="text"] {
+	font-size: 1.1em;
+	padding: 10px;
+	margin-left: 50px;
+	text-align: center;
+	color: white;
+	font-weight: 800;
+	border: none;
+}
+#red-text {
+	background-color: rgb(255,0,0);
+}
+#green-text {
+	background-color: rgb(0,255,0);
+}
+#blue-text {
+	background-color: rgb(0,0,255);
+}

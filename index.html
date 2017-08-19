@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="pageStyle.css">
+		<link rel="stylesheet" href="editorStyle.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<script src="ColorUtilities.js"></script>
+		<script src="Main.js"></script>
+		<script src="editorScript.js"></script>
+	</head>
+	<body onLoad="startup()">
+		<div id="header">
+			<div id="title" class="flex-center">
+				<h1>Color Caddy</h1>
+			</div>
+			<div id="schemes">
+				<button onClick="toggleSchemes()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			</div>
+			<div id="editor-button" class="flex-center">
+				<button onClick="toggleEditor()"><i class="fa fa-paint-brush" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div id="scheme-list">
+			<div class="scheme-group">
+				<button class="scheme" value="complementary" onClick="setScheme(this.value)">Complementary</button>
+			</div>
+			<div class="scheme-group">
+				<button class="scheme" value="analgous" onClick="setScheme(this.value)">Analog</button>
+				<button class="scheme" value="triad" onClick="setScheme(this.value)">Triad</button>
+				<button class="scheme" value="split" onClick="setScheme(this.value)">Split</button>
+			</div>
+			<div class="scheme-group">
+				<button class="scheme" value="tetradic" onClick="setScheme(this.value)">Tetradic</button>
+				<button class="scheme" value="square" onClick="setScheme(this.value)">Square</button>
+			</div>
+		</div>
+		<div id="editor-container">
+			<div id="editor">
+				<form>
+					<div class="hex-container">
+						<input type="text" value="#FFFFFF" id="hex-text" onChange="setFromHex(this.value)">
+					</div>
+					<div class="slider-container">
+						<input type="range" min="0" max="255" step="1" value="255" id="red-slider" onInput="setRed(this.value)">
+						<input type="text" value="255" id="red-text" onChange="setRed(this.value)">
+					</div>
+					<div class="slider-container">
+						<input type="range" min="0" max="255" step="1" value="255" id="green-slider" onInput="setGreen(this.value)">
+						<input type="text" value="255" id="green-text" onChange="setGreen(this.value)">
+					</div>
+					<div class="slider-container">
+						<input type="range" min="0" max="255" step="1" value="255" id="blue-slider" onInput="setBlue(this.value)">
+						<input type="text" value="255" id="blue-text" onChange="setBlue(this.value)">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="palette">
+			<div class="color-container flex-center">
+				<div class="color flex-center" id="selected-color">
+					<h1>#FFFFFF</h1>
+				</div>
+			</div>
+			<div class="color-container flex-center">
+				<div class="color flex-center">
+					<h1>#FFFFFF</h1>
+				</div>
+			</div>
+			<div class="color-container flex-center">
+				<div class="color flex-center">
+					<h1>#FFFFFF</h1>
+				</div>
+			</div>
+			<div class="color-container flex-center">
+				<div class="color flex-center">
+					<h1>#FFFFFF</h1>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>
