@@ -1,28 +1,35 @@
 function setRed(value) {
-	var slider = document.getElementById("red-slider");
+	console.log("boop!");
 	var text = document.getElementById("red-text");
 	value = verifyRGB(value);
-	slider.value = value;
+	if(value != $("#red-slider").slider("value"))
+	{
+		$("#red-slider").slider("value", value);
+	}
 	text.value = value;
 	text.style.backgroundColor = "rgb(" + value + ",0,0)";
 	setHex();
 }
 
 function setGreen(value) {
-	var slider = document.getElementById("green-slider");
 	var text = document.getElementById("green-text");
 	value = verifyRGB(value);
-	slider.value = value;
+	if(value != $("#green-slider").slider("value"))
+	{
+		$("#green-slider").slider("value", value);
+	}	
 	text.value = value;
 	text.style.backgroundColor = "rgb(0," + value + ",0)";
 	setHex();
 }
 
 function setBlue(value) {
-	var slider = document.getElementById("blue-slider");
 	var text = document.getElementById("blue-text");
 	value = verifyRGB(value);
-	slider.value = value;
+	if(value != $("#blue-slider").slider("value"))
+	{
+		$("#blue-slider").slider("value", value);
+	}	
 	text.value = value;
 	text.style.backgroundColor = "rgb(0,0," + value + ")";
 	setHex();
@@ -36,9 +43,9 @@ function verifyRGB(value) {
 }
 
 function setHex() {
-	var redVal = document.getElementById("red-slider").value;
-	var greenVal = document.getElementById("green-slider").value;
-	var blueVal = document.getElementById("blue-slider").value;
+	var redVal = document.getElementById("red-text").value;
+	var greenVal = document.getElementById("green-text").value;
+	var blueVal = document.getElementById("blue-text").value;
 	var hexField = document.getElementById("hex-text");
 	hexField.style.backgroundColor = mergeRGB([redVal, greenVal, blueVal]);
 	hexVal = [RGBtoHEX(redVal), RGBtoHEX(greenVal), RGBtoHEX(blueVal)];

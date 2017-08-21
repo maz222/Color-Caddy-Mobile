@@ -1,6 +1,20 @@
 var currScheme = "complementary";
 
 function startup() {
+	$(".jQuery-slider").slider({
+		min: 0,
+		max: 255, 
+		value: 255,
+	});
+	$("#red-slider").on("slidechange", function(ui, event) {setRed($("#red-slider").slider("value"))});
+	$("#red-slider").on("slide", function(ui, event) {setRed($("#red-slider").slider("value"))});
+
+	$("#blue-slider").on("slidechange", function(ui, event) {setBlue($("#blue-slider").slider("value"))});
+	$("#blue-slider").on("slide", function(ui, event) {setBlue($("#blue-slider").slider("value"))});
+
+	$("#green-slider").on("slidechange", function(ui, event) {setGreen($("#green-slider").slider("value"))});
+	$("#green-slider").on("slide", function(ui, event) {setGreen($("#green-slider").slider("value"))});
+
 	document.getElementById("selected-color").style.backgroundColor = "rgb(255,255,255)";
 	updateColors();
 }
@@ -69,7 +83,7 @@ function updateColors() {
 			hexVal = "#" + hexVal[0] + hexVal[1] + hexVal[2];
 			colorBox.childNodes[1].innerText = hexVal;
 		}
-		console.log([colorContainers.length, colors.length]);
+		//console.log([colorContainers.length, colors.length]);
 		for(i = 0; i < colorContainers.length - (colors.length + 1); i++) {
 			colorContainers[colorContainers.length - 1 - i].style.display = "none";
 		}

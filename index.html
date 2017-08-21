@@ -7,6 +7,11 @@
 		<script src="ColorUtilities.js"></script>
 		<script src="Main.js"></script>
 		<script src="editorScript.js"></script>
+
+		<!-- JQuery sliders -->
+		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	</head>
 	<body onLoad="startup()">
 		<div id="header">
@@ -41,15 +46,15 @@
 						<input type="text" value="#FFFFFF" id="hex-text" onChange="setFromHex(this.value)">
 					</div>
 					<div class="slider-container">
-						<input type="range" min="0" max="255" step="1" value="255" id="red-slider" onInput="setRed(this.value)">
+						<div id="red-slider" class="jQuery-slider"></div>
 						<input type="text" value="255" id="red-text" onChange="setRed(this.value)">
 					</div>
 					<div class="slider-container">
-						<input type="range" min="0" max="255" step="1" value="255" id="green-slider" onInput="setGreen(this.value)">
+						<div id="green-slider" class="jQuery-slider"></div>
 						<input type="text" value="255" id="green-text" onChange="setGreen(this.value)">
 					</div>
 					<div class="slider-container">
-						<input type="range" min="0" max="255" step="1" value="255" id="blue-slider" onInput="setBlue(this.value)">
+						<div id="blue-slider" class="jQuery-slider"></div>
 						<input type="text" value="255" id="blue-text" onChange="setBlue(this.value)">
 					</div>
 				</form>
