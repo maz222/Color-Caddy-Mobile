@@ -1,5 +1,4 @@
 function setRed(value) {
-	console.log("boop!");
 	var text = document.getElementById("red-text");
 	value = verifyRGB(value);
 	if(value != $("#red-slider").slider("value"))
